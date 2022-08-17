@@ -1,0 +1,27 @@
+To Do:
+
+
+Setup mlflow on aws
+
+Refactor EDA
+Refactor MODELING
+
+Build Training Pipeline
+Unit Tests
+Integration Tests
+
+Build Scoring Pipeline
+Unit Tests
+Integration Tests
+
+Monitoring Pipeline
+Unit Tests
+Integration Tests
+
+
+
+CI/CD
+Terraform
+
+
+mlflow ui --backend-store-uri sqlite:///mlflow.db
