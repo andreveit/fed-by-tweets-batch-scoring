@@ -69,9 +69,11 @@ coverage.xml
 # Own Stuff
 dev.ipynb
 mlflow.db
+mlruns/
 data/
 word2vec.ipynb
 preprocessing.ipynb
+*/notebooks/data-utils/
 
 
 # Django stuff:

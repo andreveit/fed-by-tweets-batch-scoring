@@ -216,8 +216,8 @@ class UsersTreater(BaseTreater, TreaterMixIn):
     Most frequent users are kept, while the least frequent ones are discarted.
     '''
 
-    def __init__(self, ranking_file = './users_ranking.json'):
-        self.ranking_file = ranking_file
+    def __init__(self, ranking_file = None):
+        self.ranking_file = self.get_filename(ranking_file, 'users_ranking.json')
         self.rank = None
 
     def fit(self, corpus, ranking_size = 40):
@@ -307,8 +307,8 @@ class TweetsTextPreprocessor(BaseEstimator, TransformerMixin, TreaterMixIn):
     '''
     Custom sklearn transformer to preprocess tweets text.
     '''
-    def __init__(self, tokenizer = TweetTokenizer, verbose = False):
-        self.tokenizer = tokenizer()
+    def __init__(self, verbose = False):
+        self.tokenizer = TweetTokenizer()
         self.verbose = verbose
         self.norm = Normaliser(tokenizer='readable')
         self.spc = spacy.load("pt_core_news_sm")
@@ -357,7 +357,7 @@ class TweetsTextPreprocessor(BaseEstimator, TransformerMixin, TreaterMixIn):
                 tweet = ['null']
             bag.append(' '.join(tweet))
 
-        return pd.DataFrame({'text':bag})
+        return bag # pd.DataFrame({'text':bag})
 
 
     
