@@ -3,7 +3,6 @@ To Do:
 
 Setup mlflow on aws
 
-Refactor EDA
 Refactor MODELING
 
 Build Training Pipeline

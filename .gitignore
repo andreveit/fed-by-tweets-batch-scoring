@@ -71,6 +71,7 @@ dev.ipynb
 mlflow.db
 data/
 word2vec.ipynb
+preprocessing.ipynb
 
 
 # Django stuff:
